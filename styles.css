@@ -4,10 +4,14 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+    font-family: Onest;
+    background-color: #faf4ed;
+}
+
 .intro-section, .skills-section, .projects-section, .contact-section {
     height: 100vh;
     width: 100%;
-    background-color: pink;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -22,6 +26,26 @@ html, body {
     max-width: 40vw;
 }
 
+.intro-section {
+    background-image: url('assets/intro.gif');
+    background-size: cover;
+}
+
+.intro-box {
+    font-family: Sofia;
+    padding: 2rem;
+    margin-left: 1rem;
+    border-radius: 20px;
+    background-color: rgba(231,232, 232, 0.8);
+}
+
+.intro-video {
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
 .skills-section {
     align-items: center;
 }
@@ -29,7 +53,11 @@ html, body {
 .navbar {
     width: 100vw;
     display: flex;
+    position: relative;
     justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(242, 233, 225, 0.4);
+    z-index: 1000;
 }
 
 .nav-box {
@@ -40,7 +68,6 @@ html, body {
     padding-bottom: 0.6rem;
     display: flex;
     justify-content: center;
-    color: black;
     position: fixed;
     background-color: rgba(255,244,244,0.6);
     backdrop-filter: blur(0.2rem);
@@ -52,13 +79,20 @@ html, body {
 }
 
 .navbar a {
-    color: black;
+    margin: 3px;
+    color: #b4637a;
+    text-decoration: none;
+}
+
+a:hover {
+    border-radius: 10%;
+    font-style: oblique;
+    color: #56949f;
 }
 
 .projects-section {
     margin: 0;
     height: auto;
-    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -80,7 +114,7 @@ html, body {
 .project-card {
     border: 3px solid;
     border-radius: 20px;
-    padding: 10px;
+    padding: 7px;
 }
 
 
@@ -104,4 +138,83 @@ html, body {
 
 .contact-form * {
     margin: 0.2rem;
+}
+
+.project-card {
+    max-width: 31%;
+    transition: 150ms ease-in-out;
+    text-align: center;
+}
+
+.project-card-image {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.skills-box{
+    max-width: 100%;
+    justify-content: center;
+}
+
+.skill-icon {
+    max-width: 40%;
+    background-color: #575279;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 4px #b4637a;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.skill-dock {
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+}
+
+.skill-option {
+    text-align: center;
+}
+
+.skill-icon:hover {
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+   0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* Moves up by 15px */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.project-card:hover {
+    text-align: center;
+    background-color: #b4637a;
+    scale: 1.2;
+    box-shadow: 0px 0px 5px 2px #191724 ;
+    transition: 150ms ease-in-out;
+}
+
+input, textarea {
+    background-color: #fffaf3;
+    border: none;
+    padding: 0.3rem;
+}
+
+button {
+    background-color: #907aa9;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    transition: 150ms ease-in-out;
+}
+
+button:hover {
+    box-shadow: 3px 6px 0px 2px black;
+    transition: 150ms ease-in-out;
 }
